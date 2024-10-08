@@ -1,0 +1,62 @@
+CREATE TABLE medicina (
+    cedula INT,
+    periodo INT,
+    sexo TEXT,
+    preferencia INT,
+    carrera TEXT,
+    matriculado TEXT,
+    facultad TEXT,
+    puntaje INT,
+    grupo_depen TEXT,
+    region TEXT,
+    latitud TEXT,
+    longitud TEXT,
+    ptje_nem INT,
+    psu_prolm INT,
+    pace TEXT,
+    gratuidad TEXT,
+    PRIMARY KEY ((carrera, matriculado), periodo)
+) WITH CLUSTERING ORDER BY (periodo DESC);
+
+
+CREATE TABLE maule (
+    cedula INT,
+    periodo INT,
+    sexo TEXT,
+    preferencia INT,
+    carrera TEXT,
+    matriculado TEXT,
+    facultad TEXT,
+    puntaje INT,
+    grupo_depen TEXT,
+    region TEXT,
+    latitud TEXT,
+    longitud TEXT,
+    ptje_nem INT,
+    psu_prolm INT,
+    pace TEXT,
+    gratuidad TEXT,
+    PRIMARY KEY ((carrera, region, matriculado), periodo)
+) WITH CLUSTERING ORDER BY (periodo DESC);
+
+
+
+CREATE TABLE facultad (
+    cedula INT,
+    periodo INT,
+    sexo TEXT,
+    preferencia INT,
+    carrera TEXT,
+    matriculado TEXT,
+    facultad TEXT,
+    puntaje INT,
+    grupo_depen TEXT,
+    region TEXT,
+    latitud TEXT,
+    longitud TEXT,
+    ptje_nem INT,
+    psu_prolm INT,
+    pace TEXT,
+    gratuidad TEXT,
+    PRIMARY KEY ((facultad, matriculado), puntaje)
+) WITH CLUSTERING ORDER BY (puntaje DESC);

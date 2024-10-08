@@ -15,7 +15,7 @@ CREATE TABLE medicina (
     psu_prolm INT,
     pace TEXT,
     gratuidad TEXT,
-    PRIMARY KEY ((carrera, matriculado), periodo)
+    PRIMARY KEY ((carrera, matriculado), periodo, cedula)
 ) WITH CLUSTERING ORDER BY (periodo DESC);
 
 
@@ -36,7 +36,7 @@ CREATE TABLE maule (
     psu_prolm INT,
     pace TEXT,
     gratuidad TEXT,
-    PRIMARY KEY ((carrera, region, matriculado), periodo)
+    PRIMARY KEY ((carrera, region, matriculado), periodo, cedula)
 ) WITH CLUSTERING ORDER BY (periodo DESC);
 
 
@@ -58,5 +58,5 @@ CREATE TABLE facultad (
     psu_prolm INT,
     pace TEXT,
     gratuidad TEXT,
-    PRIMARY KEY ((facultad, matriculado), puntaje)
+    PRIMARY KEY ((facultad, matriculado), puntaje, cedula, carrera, periodo)
 ) WITH CLUSTERING ORDER BY (puntaje DESC);

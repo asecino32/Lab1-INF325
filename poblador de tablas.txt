@@ -1,3 +1,5 @@
+docker cp postulaciones.csv cassandra1:postulaciones.csv
+
 COPY medicina(
     cedula, periodo, sexo, preferencia, carrera, matriculado, 
     facultad, puntaje, grupo_depen, region, latitud, longitud, 

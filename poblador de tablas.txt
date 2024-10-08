@@ -1,0 +1,23 @@
+COPY medicina(
+    cedula, periodo, sexo, preferencia, carrera, matriculado, 
+    facultad, puntaje, grupo_depen, region, latitud, longitud, 
+    ptje_nem, psu_prolm, pace, gratuidad
+ ) FROM 'postulaciones.csv' 
+WITH DELIMITER= ';' 
+AND HEADER=true;
+
+COPY maule(
+    cedula, periodo, sexo, preferencia, carrera, matriculado, 
+    facultad, puntaje, grupo_depen, region, latitud, longitud, 
+    ptje_nem, psu_prolm, pace, gratuidad
+ ) FROM 'postulaciones.csv' 
+WITH DELIMITER= ';' 
+AND HEADER=true;
+
+COPY facultad(
+    cedula, periodo, sexo, preferencia, carrera, matriculado, 
+    facultad, puntaje, grupo_depen, region, latitud, longitud, 
+    ptje_nem, psu_prolm, pace, gratuidad
+ ) FROM 'postulaciones.csv' 
+WITH DELIMITER= ';' 
+AND HEADER=true;

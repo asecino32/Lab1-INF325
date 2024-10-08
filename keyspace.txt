@@ -1,0 +1,4 @@
+CREATE KEYSPACE lab1 WITH replication = {
+ 'class': 'SimpleStrategy', 
+'replication_factor': 3
+ }
